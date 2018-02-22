@@ -1,0 +1,71 @@
+Compiling Control Wallet Kraken Coin - Ubuntu 
+
+Once you purchased a fresh VPS Ubuntu Server,
+
+Start by copy-pasting the following commands one by one:
+(in the console you paste using right click-enter).
+
+Do these steps as a root
+
+apt-get update
+
+apt-get upgrade
+
+
+Install Essentials:
+------------------
+apt-get install git libgmp-dev openssl build-essential libtool autotools-dev pkg-config libssl-dev libboost-all-dev autoconf automake qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev
+
+
+
+Install libsecp256k1 as a root:
+--------------------
+apt-get install git
+git clone https://github.com/bitcoin-core/secp256k1
+cd ~/secp256k1
+./autogen.sh
+./configure
+make
+./tests
+make install  # optional
+
+Berkeley:
+---------------------
+apt-get install software-properties-common
+
+add-apt-repository ppa:bitcoin/bitcoin
+
+cd ~
+git clone https://github.com/krakencoins/Kraken.git
+cd ~/Kraken/src
+make -f makefile.unix
+./Krakend
+
+apt-get install nano git -y
+cd ~/.Kraken
+nano ~/.Kraken/Kraken.conf
+
+rpcuser=yourusername  
+rpcpassword=yourpassword
+rpcallowip=127.0.0.1
+daemon=1
+server=1
+listen=1
+
+
+##(Save And Exit) 
+
+
+cd ~/Kraken/src
+
+To run Control Wallet do this:
+./Krakend
+
+You should see "server starting"
+
+To check the status of your masternode, 
+
+./Krakend getinfo 
+
+
+Once the blocks number is the same that you can see in the help-debug window-information of your synced local wallet, or on the block explorer, it means your vps wallet is synced.
