@@ -45,7 +45,7 @@ This is your MASTERNODE DEPOSIT ADDRESS, where you will deposit the coins to cre
 If you were sent more or less than 2500 KC, send exactly 2500 KC to yourself so you have a valid transaction.
 You need 15 confirmations on your valid tx to start your masternode.
 
-In the Console Debug window enter ìmasternode genkeyî and copy the result to your notepad.
+In the Console Debug window enter ‚Äúmasternode genkey‚Äù and copy the result to your notepad.
 This is your MASTERNODE PRIVKEY. 
 
 Now we need to open the local wallet configuration file, it's in a hidden folder on your roaming folder on your computer, so to access it:
@@ -65,7 +65,7 @@ masternodeprivkey=	(your local masternode private key)
 masternodeaddr=		(IP:Port)
 
 
-Go back to your Notepad and copy-paste your private key after the equals sign of ìmasternodeprivkey=î.
+Go back to your Notepad and copy-paste your private key after the equals sign of ‚Äúmasternodeprivkey=‚Äù.
 Paste the IP and PORT after masternodeaddr=   (example 23.34.32.220:14117)  
 IP is your remote VPS IP Address, Port for this coin is 14117  
 Now save and close the Kraken.conf file.
