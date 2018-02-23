@@ -14,7 +14,7 @@ apt-get upgrade
 
 Install Essentials:
 ------------------
-apt-get install git libgmp-dev openssl build-essential libtool autotools-dev pkg-config libssl-dev libboost-all-dev autoconf automake qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev
+apt-get install git nano libgmp-dev openssl build-essential libtool autotools-dev pkg-config libssl-dev libboost-all-dev autoconf automake qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev -y
 
 
 
@@ -41,7 +41,7 @@ cd ~/Kraken/src
 make -f makefile.unix
 ./Krakend
 
-apt-get install nano git -y
+
 cd ~/.Kraken
 nano ~/.Kraken/Kraken.conf
 
