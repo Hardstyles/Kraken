@@ -1,4 +1,4 @@
-	Local Windows Hot wallet - VPS Ubuntu 14.04 Cold wallet setup
+Local Windows Hot wallet - VPS Ubuntu 14.04 Cold wallet setup
 -------------------------------------------------------------------------------------------
 
 We will be setting up two masternode wallets:
@@ -278,4 +278,3 @@ If you get "status" : 1 it's all good! You don't need to keep you local open now
 If it's not working i suggest you go to the Kraken Coin slack to ask for help https://krakencoin.slack.com/
 
 Enjoy your rewards !  
-
