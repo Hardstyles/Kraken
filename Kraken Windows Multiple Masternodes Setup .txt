@@ -14,8 +14,8 @@ STEP 1 : Preparing masternodes
 2 - Create folder "KrakenMN1" there (example in C: drive)
 3 - Copy file "Kraken-qt.exe" in folder "KrakenMN1"
 4 - Create in folder "KrakenMN1" new folder "data"
-Kraken folder is located at C:/users/***Your windows username***/appdata(hidden)/roaming/Kraken
-5 - Copy file "blk0001.dat" and folder "txleveldb" from the above folder into the created folder "data" 
+Main Kraken folder is located at C:/users/***Your windows username***/appdata(hidden)/roaming/Kraken
+5 - Copy file "blk0001.dat" and folder "txleveldb" from the above folder into the created folder "KrakenMN1/data" 
 6 - Rename "Kraken-qt.exe" to the "Kraken-mn1.exe" 
 7 - Press Win+R and type "cmd" and press Enter
 8 - Now type there:
@@ -23,22 +23,22 @@ echo start Kraken-mn1.exe -datadir=./data > %homepath%/Desktop/startmn1.cmd
 9 - Move file "startmn1.cmd" from Desktop to the "KrakenMN1" folder
 10 - Repeat the process from step 2 for each masternode you want to created, with changing mn1 to mn2, mn3
 11 - Run startmn1.cmd, startmn2.cmd and startmn3.cmd, wait for complete loading wallets and complete syncing with blockchain
-12 - Now you can exit from each running masternode wallets
 
-Now you can follow the same steps of single masternode guide
-4.Go to Help -> Debug Console.
-5.In the Console window enter getaccountaddress 0 and copy the result. This is your MASTERNODE DEPOSIT ADDRESS, where you will deposit the coins to create a masternode. Pay 2500 KC exactly into this address. No more, no less.
+
+Now you can follow the same steps of single masternode guide foe each multiply masternode (KrakenMN1, KrakenMN2, KrakenMN3)
+1.Go to Help -> Debug Console.
+2.In the Console window enter getaccountaddress 0 and copy the result. This is your MASTERNODE DEPOSIT ADDRESS, where you will deposit the coins to create a masternode. Pay 2500 KC exactly into this address. No more, no less.
 -·Wait for the 1 confirmation of the transaction.
-6.In the Console Debug window enter masternode genkey and copy the result. This is your MASTERNODE PRIVKEY.
-7.Open Configuration File in Notepad. This config file is located at C:/users/***Your windows username***/appdata(hidden)/roaming/Kraken  Then paste in the following.
+3.In the Console Debug window enter masternode genkey and copy the result. This is your MASTERNODE PRIVKEY.
+4.Open Configuration File (Kraken.conf) in Notepad. This config file is located at KrakenMN1/data .  Then paste in the following.
 
 port=14117 (for second and third MNs ports have to be different, for example 14118 and 14119)
 masternode=1
 masternodeprivkey=PRIVATEKEYREPLACETHIS
 
-8.Now save and close the config file.
-9.Close the wallet by going to File -> Exit.
-Open the Kraken Wallet again by running Kraken-qt.exe. This is how you will always start the wallet going forward.
-10. Wait for 15 confirmations of the transaction of 2500 coins.
+5.Now save and close the config file.
+6.Close the wallet by going to File -> Exit.
+Open the Kraken Wallet again by running startmn1.cmd. This is how you will always start the wallet going forward.
+7. Wait for 15 confirmations of the transaction of 2500 coins.
 Go to Tools -> Debug Console. Enter "masternode start" in all the wallet's consoles. You will see the response “Masternode started successfully”. Congratulations, your masternode is now running.
 All masternodes need to be active for a certain amount of blocks before they are recognized by the network and eligible for rewards.
