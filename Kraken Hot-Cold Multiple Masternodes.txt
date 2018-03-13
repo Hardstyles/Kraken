@@ -21,7 +21,7 @@ apt-get upgrade -y
 
 #Firewall ( can do this step at anytime )
 
-sudo apt-get ufw
+sudo apt-get install ufw
 sudo ufw allow OpenSSH
 sudo ufw allow 14117
 sudo ufw default deny incoming
