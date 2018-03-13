@@ -4,7 +4,6 @@ Step-by-step guide for starting multiple masternodes (3 masternodes in this exam
 
 Requirements
     Kraken wallet running on your local computer with at least 2500 Kraken Coins for every masternode
-    white static IP with open ports for masternodes
 
 After installation, you can shut down your local wallet (controller) anytime, and the remote wallet will continue working 24/7, and it will be sending your rewards to your local wallet.
 
@@ -142,6 +141,6 @@ STEP 3 : Starting masternodes
 
 3 - Go to Masternodes tab and switch to the "My Masternodes"
 
-4 – Press "Start All"
+4 â€“ Press "Start All"
 
 You have created 3 working masternodes. Don't be afraid to running PoS on controller wallet. It's do not damaged your masternode transactions because all masternode coins will be excluded from PoS.
